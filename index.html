@@ -4,8 +4,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Patrick Portfolio</title>
+
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Navbar */
+    .navbar-brand img {
+      margin-right: 8px;
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #a445b2, #d41872);
+      color: white;
+      padding-top: 100px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+    }
+
+    .hero p {
+      margin: 20px 0;
+      font-size: 1.2rem;
+      color: #f1f1f1;
+    }
+
+    .hero img {
+      max-width: 80%;
+    }
+  </style>
 </head>
 <body>
 
@@ -13,19 +47,19 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
     <div class="container">
       <a class="navbar-brand fw-bold text-primary" href="#">
-        <img src="./assets/img/logo.png" alt="Logo" height="40"> Patrix
+        <img src="https://via.placeholder.com/40x40" alt="Logo" height="40"> Patrix
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Testimonials</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Faq</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">Faq</a></li>
+          <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
         <a href="tel:+1728365413" class="btn btn-primary ms-lg-3">+1 728365413</a>
       </div>
@@ -42,52 +76,25 @@
           <a href="#contact" class="btn btn-dark btn-lg">Get in Touch →</a>
         </div>
         <div class="col-lg-6 text-center">
-          <img src="./assets/img/hero.png" alt="Illustration" class="img-fluid">
+          <img src="https://via.placeholder.com/500x400" alt="Illustration" class="img-fluid">
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="./assets/js/main.js"></script>
+
+  <script>
+    // Smooth scroll for nav links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+          behavior: "smooth"
+        });
+      });
+    });
+  </script>
 </body>
 </html>
-body {
-  font-family: 'Poppins', sans-serif;
-}
-
-/* Navbar */
-.navbar-brand img {
-  margin-right: 8px;
-}
-
-/* Hero Section */
-.hero {
-  min-height: 100vh;
-  background: linear-gradient(135deg, #a445b2, #d41872);
-  color: white;
-  padding-top: 100px;
-}
-
-.hero h1 {
-  font-size: 3rem;
-}
-
-.hero p {
-  margin: 20px 0;
-  font-size: 1.2rem;
-  color: #f1f1f1;
-}
-
-.hero img {
-  max-width: 80%;
-}
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener("click", function(e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute("href")).scrollIntoView({
-      behavior: "smooth"
-    });
-  });
-});
