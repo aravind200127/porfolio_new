@@ -52,3 +52,42 @@
   <script src="./assets/js/main.js"></script>
 </body>
 </html>
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar */
+.navbar-brand img {
+  margin-right: 8px;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #a445b2, #d41872);
+  color: white;
+  padding-top: 100px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero p {
+  margin: 20px 0;
+  font-size: 1.2rem;
+  color: #f1f1f1;
+}
+
+.hero img {
+  max-width: 80%;
+}
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth"
+    });
+  });
+});
